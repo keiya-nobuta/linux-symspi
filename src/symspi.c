@@ -763,7 +763,7 @@ struct symspi_dev_private {
 
 	struct proc_dir_entry *proc_root;
 	struct proc_dir_entry *info_file;
-	struct file_operations info_ops;
+	struct proc_ops info_ops;
 
 	struct symspi_info info;
 };
@@ -3063,8 +3063,7 @@ static inline int __symspi_info_init(struct symspi_dev *symspi)
 
 	// info access operations
 	memset(&symspi->p->info_ops, 0, sizeof(symspi->p->info_ops));
-	symspi->p->info_ops.read  = &__symspi_info_read;
-	symspi->p->info_ops.owner = THIS_MODULE;
+	symspi->p->info_ops.proc_read  = &__symspi_info_read;
 
 	if (IS_ERR_OR_NULL(symspi->p->proc_root)) {
 		symspi_err("failed to create info proc entry:"
