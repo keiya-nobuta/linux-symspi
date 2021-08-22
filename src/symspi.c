@@ -260,10 +260,10 @@
 
 #if SYMSPI_VERBOSITY >= 2
 #define symspi_warning(fmt, ...)					\
-	pr_warning(SYMSPI_LOG_PREFIX"%s: "fmt"\n", __func__		\
+	pr_warn(SYMSPI_LOG_PREFIX"%s: "fmt"\n", __func__		\
 		   , ##__VA_ARGS__)
 #define symspi_warning_raw(fmt, ...)					\
-	pr_warning(SYMSPI_LOG_PREFIX""fmt"\n", ##__VA_ARGS__)
+	pr_warn(SYMSPI_LOG_PREFIX""fmt"\n", ##__VA_ARGS__)
 #else
 #define symspi_warning(fmt, ...)
 #define symspi_warning_raw(fmt, ...)
