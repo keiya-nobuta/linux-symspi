@@ -28,6 +28,7 @@
 #include <linux/printk.h>
 #include <linux/spi/spi.h>
 #include <linux/gpio.h>
+#include <linux/of.h>
 #include <linux/platform_device.h>
 #include <linux/slab.h>
 #include <linux/interrupt.h>
