@@ -35,7 +35,7 @@
 
 
 // NOTE: Keep updated if adding/removing error type
-#define SYMSPI_ERROR_TYPES_COUNT 14
+#define SYMSPI_ERROR_TYPES_COUNT 15
 
 
 // no error code, keep it 0
